@@ -13,18 +13,16 @@
 	<!-- 注意：contextConfigLocation参数是一个用逗号分隔的路径列表，其路径是相对于Web系统的根路径的 -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>
-        	classpath:spring-dao.xml
-        </param-value>
+		<param-value>classpath:applicationContext-*.xml</param-value>
 	</context-param>
-	 <!-- Spring监听器 -->  
-    <listener>  
-        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>  
-    </listener>  
-    <!-- 防止Spring内存溢出监听器 -->  
-    <listener>  
-        <listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>  
-    </listener>
+	<!-- Spring监听器 -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<!-- 防止Spring内存溢出监听器 -->
+	<listener>
+		<listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+	</listener>
 	<!-- SpringMVC的前端控制器 -->
 	<!-- 当DispatcherServlet载入后，它将从一个XML文件中载入Spring的应用上下文，该XML文件的名字取决于<servlet-name> -->
 	<!-- 这里DispatcherServlet将试图从一个叫做springmvc-servlet.xml的文件中载入应用上下文，其默认位于WEB-INF目录下 -->
