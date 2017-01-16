@@ -14,7 +14,7 @@ public class TestController {
 	@Autowired
 	UserInfoService userInfoService;
 	
-	@RequestMapping("test1")
+	@RequestMapping("test")
 	@ResponseBody
 	public String test() {
 		LogUtil.getLoger().CommonLog().info("测试日志");
