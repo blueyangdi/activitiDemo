@@ -14,10 +14,10 @@ public class TestController {
 	@Autowired
 	UserInfoService userInfoService;
 	
-	@RequestMapping("test2")
+	@RequestMapping("test1")
 	@ResponseBody
 	public String test() {
-		LogUtil.getLoger().CommonLog().info("测试日志");
+		LogUtil.getLoger().CommonLog().info("测试日志2");
 
 		return userInfoService.getUserInfo().getName();
 	}
