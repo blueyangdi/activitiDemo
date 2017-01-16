@@ -17,7 +17,7 @@ public class TestController {
 	@RequestMapping("test1")
 	@ResponseBody
 	public String test() {
-		LogUtil.getLoger().CommonLog().info("测试日志2");
+		LogUtil.getLoger().CommonLog().info("测试日志");
 
 		return userInfoService.getUserInfo().getName();
 	}
