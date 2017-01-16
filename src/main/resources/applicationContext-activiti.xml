@@ -15,6 +15,7 @@
     <property name="transactionManager" ref="txManager" />
     <property name="databaseSchemaUpdate" value="true" />
     <property name="jobExecutorActivate" value="false" />
+    <!--  <property name="deploymentResources" value="classpath*:diagram/MyProcess.bpmn" />-->
   </bean>
   
   <bean id="processEngine" class="org.activiti.spring.ProcessEngineFactoryBean">
