@@ -37,10 +37,10 @@
         background: url(images/layout-browser-hd-bg.gif) #7f99be repeat-x center 50%;
         line-height: 20px;color: #fff; font-family: Verdana, 微软雅黑,黑体">
         <span style="float:right; padding-right:20px;" class="head"></span>
-        <span style="padding-left:10px; font-size: 16px; "><img src="images/blocks.gif" width="20" height="20" align="absmiddle" /> 联通支付公司差错处理平台</span>
+        <span style="padding-left:10px; font-size: 16px; "><img src="images/blocks.gif" width="20" height="20" align="absmiddle"> 联通支付公司差错处理平台</span>
     </div>
     <div region="south" split="true" style="height: 30px; background: #D2E0F2; ">
-        <div class="footer">联通支付公司</div>
+        <div class="footer">联通支3付公司</div>
     </div>
     <div region="west" split="true" title="导航菜单" style="width:180px;" id="west">
 	<div class="easyui-accordion" fit="true" border="false">
