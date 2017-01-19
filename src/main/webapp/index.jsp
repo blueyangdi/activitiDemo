@@ -16,12 +16,12 @@
 	 var _menus = {"menus":[
 						{"menuid":"1","icon":"icon-sys","menuname":"操作员",
 							"menus":[{"menuname":"操作员代办事项","icon":"icon-nav","url":"operatorTodo.jsp"},
-									{"menuname":"操作员已办事项","icon":"icon-add","url":"demo.html"}
+									{"menuname":"操作员已办事项","icon":"icon-add","url":"operatorHi.jsp"}
 								]
 						},
 						{"menuid":"1","icon":"icon-sys","menuname":"审核员",
-							"menus":[{"menuname":"审核员代办事项","icon":"icon-nav","url":"demo2.html"},
-									{"menuname":"审核员已办事项","icon":"icon-add","url":"demo3.html"}
+							"menus":[{"menuname":"审核员代办事项","icon":"icon-nav","url":"auditorTodo.jsp"},
+									{"menuname":"审核员已办事项","icon":"icon-add","url":"auditorHi.jsp"}
 								]
 						}
 				]};
