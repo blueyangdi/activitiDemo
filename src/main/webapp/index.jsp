@@ -15,7 +15,7 @@
     <script type="text/javascript">
 	 var _menus = {"menus":[
 						{"menuid":"1","icon":"icon-sys","menuname":"操作员",
-							"menus":[{"menuname":"操作员代办事项","icon":"icon-nav","url":"demo1.html"},
+							"menus":[{"menuname":"操作员代办事项","icon":"icon-nav","url":"operatorTodo.jsp"},
 									{"menuname":"操作员已办事项","icon":"icon-add","url":"demo.html"}
 								]
 						},
@@ -25,6 +25,37 @@
 								]
 						}
 				]};
+	 
+	 $(function(){
+			$('#tt').datagrid({
+				url: 'queryTask',
+				title: '任务列表',
+				fitColumns: true,
+				columns:[[
+					{field:'name',title:'任务名称',width:150},
+					{field:'key',title:'任务key',width:150},
+					{field:'id',title:'任务id',width:150},
+					{field:'opt',title:'操作',width:150,
+						formatter:function(value,rec){  
+			                var btn = '<a class="editcls" onclick="runTask(\''+rec.key+'\')" href="javascript:void(0)">执行</a>';  
+			                return btn;  
+			            } 	
+					}
+				]],
+			});
+		});
+	    
+	    function runTask(taskKey){  
+	    	$.ajax({
+	             type: "POST",
+	             url: "runTask",
+	             data: {taskKey:taskKey},
+	             dataType: "json",
+	             success: function(data){
+	                        alert("执行成功！");
+	                      }
+	         });
+	    }  
     </script>
 
 </head>
@@ -53,8 +84,10 @@
         <div id="tabs" class="easyui-tabs"  fit="true" border="false" >
 			<div title="欢迎使用" style="padding:20px;overflow:hidden;" id="home">
 				
-			<h1>欢迎使用差错处理平台</h1>
-
+			<h1>欢迎使用差错处理平台,请开始以下任务</h1>
+    <table id="tt" class="easyui-datagrid" style="width:600px;height:250px">
+    		
+    </table>
 			</div>
 		</div>
     </div>
